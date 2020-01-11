@@ -1,8 +1,8 @@
 var express = require('express');
 var router = express.Router();
 var unitManipulator=require('../backend/controller/unitManipulator');
-/* GET users listing. */
-router.get('/convert', unitManipulator.convert);
 
+router.get('/convert', unitManipulator.convert);
+router.get('/compare', unitManipulator.compare);
 
 module.exports = router;
