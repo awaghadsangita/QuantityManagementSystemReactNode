@@ -2,9 +2,7 @@ const unitManipulatorService = require('../service/unitManipulatorService');
 
 class UnitManipulator {
     convert(req, res) {
-        req.checkBody('measurementType', 'should not be empty').notEmpty();
         req.checkBody('unitType', 'should not be empty').notEmpty();
-
         req.checkBody('unitValue', 'should not be empty').notEmpty();
         req.checkBody('toWhichUnitType', 'should not be empty').notEmpty();
 
