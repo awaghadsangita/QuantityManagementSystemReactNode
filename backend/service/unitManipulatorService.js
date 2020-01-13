@@ -21,7 +21,13 @@ class UnitManipulatorService {
                 if (unit.getType(firstUnit.unitType) !== unit.getType(secondUnit.unitType))
                     reject('not comparable unit type');
 
-                let isEqual = (unit.getBaseValue(firstUnit.unitType) * firstUnit.unitValue) == (unit.getBaseValue(secondUnit.unitType) * secondUnit.unitValue)
+                if (firstUnit.unitType == "FAHRENHEIT")
+                    resolve(Math.round((firstUnit.unitValue - 32) * (5 / 9)) == secondUnit.unitValue)
+
+                if (firstUnit.unitType == "CELSIUS")
+                    resolve(Math.round((firstUnit.unitValue * (9 / 5)) + 32) == secondUnit.unitValue);
+
+                let isEqual = Math.round(unit.getBaseValue(firstUnit.unitType) * firstUnit.unitValue) == Math.round(unit.getBaseValue(secondUnit.unitType) * secondUnit.unitValue)
                 resolve(isEqual);
             } catch (e) {
                 reject(e)

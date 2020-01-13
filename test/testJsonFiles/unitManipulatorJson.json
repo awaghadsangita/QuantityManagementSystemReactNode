@@ -1,0 +1,17 @@
+{
+  "compare": [{
+    "unitFieldsEmpty": {"firstUnitType": "","firstUnitValue": "","secondUnitType": "","secondUnitValue": ""}
+  }],
+  "compareVolume": [{
+    "oneLiterAndThreePtSevenEight": {"firstUnitType": "GALLON","firstUnitValue": 1,"secondUnitType": "LITER","secondUnitValue": 3.78541},
+    "oneLitreAndThousandMl": {"firstUnitType": "LITER","firstUnitValue": 1,"secondUnitType": "MILLI_LITRE","secondUnitValue": 1000}
+  }],
+  "compareWeight": [{
+    "oneKgAndThousandGrams":{"firstUnitType": "KILOGRAM","firstUnitValue": 1,"secondUnitType": "GRAMS","secondUnitValue": 1000},
+    "oneTonneAndThousandKilograms":{"firstUnitType": "TONNES","firstUnitValue": 1,"secondUnitType": "KILOGRAM","secondUnitValue": 1000}
+  }],
+  "compareTemperature": [{
+    "twoTwelveFahrenheitAndHundredCelsius":{"firstUnitType": "FAHRENHEIT","firstUnitValue": 212,"secondUnitType": "CELSIUS","secondUnitValue": 100}
+  }]
+
+}

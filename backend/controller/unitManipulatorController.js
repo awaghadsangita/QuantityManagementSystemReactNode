@@ -1,6 +1,6 @@
 const unitManipulatorService = require('../service/unitManipulatorService');
 
-class UnitManipulator {
+class UnitManipulatorController {
     convert(req, res) {
         req.checkBody('unitType', 'should not be empty').notEmpty();
         req.checkBody('unitValue', 'should not be empty').notEmpty();
@@ -61,8 +61,8 @@ class UnitManipulator {
                 unitType: req.body.secondUnitType,
                 unitValue: req.body.secondUnitValue,
             }
-            /**call compare service and handle callback */
 
+            /**call compare service and handle callback */
             unitManipulatorService.compare(firstUnit, secondUnit).then((data) => {
                 /** make response array with it's field */
                 response.success = true;
@@ -80,4 +80,4 @@ class UnitManipulator {
     }
 }
 
-module.exports = new UnitManipulator();
+module.exports = new UnitManipulatorController();
